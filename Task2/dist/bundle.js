@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("console.log('hello again')\n\n//# sourceURL=webpack://task_2/./src/index.js?");
+eval("const allvoices = document.querySelector('.allvoices');\r\nconst microphone = document.querySelector('.microphone');\r\nconst stream = document.querySelector('.stream');\r\n\r\nconst iconvalues = document.querySelector('.iconvalues');\r\n\r\nconst inputactive = document.querySelector('.activereplacement');\r\n\r\nallvoices.onclick = function () {\r\n    inputactive.textContent = 'allvoices - mode';\r\n\r\n    allvoices.classList.add(\"selecteditem\");\r\n    microphone.classList.remove(\"selecteditem\");\r\n    stream.classList.remove(\"selecteditem\");\r\n\r\n};\r\n\r\nmicrophone.onclick = function () {\r\n    inputactive.textContent = 'speaker - mode';\r\n\r\n    microphone.classList.add(\"selecteditem\");\r\n    allvoices.classList.remove(\"selecteditem\");\r\n    stream.classList.remove(\"selecteditem\");\r\n};\r\n\r\nstream.onclick = function () {\r\n    inputactive.textContent = 'stream - mode';\r\n\r\n    stream.classList.add(\"selecteditem\");\r\n    allvoices.classList.remove(\"selecteditem\");\r\n    microphone.classList.remove(\"selecteditem\");\r\n};\n\n//# sourceURL=webpack://task_2/./src/index.js?");
 
 /***/ })
 
