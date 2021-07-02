@@ -43,7 +43,7 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 156px;
+  height: 97vh;
   width: 390px;
   margin: auto;
 }
