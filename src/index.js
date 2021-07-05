@@ -2,31 +2,26 @@ const allvoices = document.querySelector('.allvoices');
 const microphone = document.querySelector('.microphone');
 const stream = document.querySelector('.stream');
 
-const iconvalues = document.querySelector('.iconvalues');
-
 const inputactive = document.querySelector('.activereplacement');
+
+function changeclass(activemode) {
+    allvoices.classList.remove("selecteditem");
+    microphone.classList.remove("selecteditem");
+    stream.classList.remove("selecteditem");
+    activemode.classList.add("selecteditem");
+}
 
 allvoices.onclick = function () {
     inputactive.textContent = 'allvoices - mode';
-
-    allvoices.classList.add("selecteditem");
-    microphone.classList.remove("selecteditem");
-    stream.classList.remove("selecteditem");
-
+    changeclass(this);
 };
 
 microphone.onclick = function () {
     inputactive.textContent = 'speaker - mode';
-
-    microphone.classList.add("selecteditem");
-    allvoices.classList.remove("selecteditem");
-    stream.classList.remove("selecteditem");
+    changeclass(this);
 };
 
 stream.onclick = function () {
     inputactive.textContent = 'stream - mode';
-
-    stream.classList.add("selecteditem");
-    allvoices.classList.remove("selecteditem");
-    microphone.classList.remove("selecteditem");
+    changeclass(this);
 };
