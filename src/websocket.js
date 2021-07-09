@@ -3,6 +3,8 @@ var app = express();
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 
+app.use(express.static("./"));
+
 server.listen(3000);
 
 app.get('/', function (request, respons) {
@@ -12,7 +14,7 @@ app.get('/', function (request, respons) {
 users = [];
 connections = [];
 
-io.sockets.on('connection', function (socket) {
+io.on('connection', function (socket) {
     connections.push(socket);
 
     socket.on('disconnect', function (data) {
