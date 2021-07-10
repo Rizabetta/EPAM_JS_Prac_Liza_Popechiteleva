@@ -18,13 +18,15 @@
     <div class="conteiner">
         <div class="dashboard">
             <p class="selectionoutput">Active: <span class="activereplacement">0</span></p>
+            <div id="messagesmicrophone">
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+            </div>
         </div>
         <div id="messagesallvoices"></div>
-        <div id="messagesmicrophone">
-            <button id="start">Start</button>
-            <button id="stop">Stop</button>
+        <div id="messagesstream">
+            <audio id="player" controls></audio>
         </div>
-        <div id="messagesstream"></div>
         <div class="activelements">
             <div class="allvoices centerorientation ">
                 <a href="" class="fas fa-bars icons"></a>

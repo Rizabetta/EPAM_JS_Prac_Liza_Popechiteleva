@@ -7,6 +7,16 @@ a, p {
   text-shadow: 0 0 0px #009885;
 }
 
+button {
+  background: #F1F3F4;
+  color: dimgray;
+  border-radius: 3px;
+  font-size: medium;
+  margin: 30px 5px;
+  padding: 5px 20px;
+  border: none;
+}
+
 p {
   line-height: 200%;
   text-align: center;
@@ -28,6 +38,7 @@ p {
       justify-content: space-around;
   -webkit-box-shadow: 0 -6px 4px -4px rgba(0, 0, 0, 0.2);
           box-shadow: 0 -6px 4px -4px rgba(0, 0, 0, 0.2);
+  margin: 5px;
 }
 
 .icons {
@@ -69,6 +80,6 @@ p {
 
 .selectionoutput {
   font-weight: bolder;
-  color: #2c2a2c;
+  color: dimgray;
 }
 /*# sourceMappingURL=style.css.map */

@@ -29,6 +29,7 @@ function hideelements(activemode) {
 allvoices.onclick = function () {
     inputactive.textContent = 'allvoices - mode';
     changeclass(this);
+    hideelements('messagesallvoices');
 };
 
 microphone.onclick = function () {
@@ -66,4 +67,5 @@ microphone.onclick = function () {
 stream.onclick = function () {
     inputactive.textContent = 'stream - mode';
     changeclass(this);
+    hideelements('messagesstream');
 };
