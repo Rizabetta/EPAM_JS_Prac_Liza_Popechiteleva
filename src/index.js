@@ -4,13 +4,13 @@ const stream = document.querySelector('.stream');
 
 const inputactive = document.querySelector('.activereplacement');
 
-const button = document.querySelector('.button');
+const messagesallvoices = document.getElementById('messagesallvoices');
+const messagesmicrophone = document.getElementById('messagesmicrophone');
+const messagesstream = document.getElementById('messagesstream');
 
-var button2, context, analyser, src;
-
-document.getElementById('messagesallvoices').hidden = true;
-document.getElementById('messagesmicrophone').hidden = true;
-document.getElementById('messagesstream').hidden = true;
+messagesallvoices.hidden = true;
+messagesmicrophone.hidden = true;
+messagesstream.hidden = true;
 
 function changeclass(activemode) {
     allvoices.classList.remove("selecteditem");
@@ -20,9 +20,9 @@ function changeclass(activemode) {
 }
 
 function hideelements(activemode) {
-    document.getElementById('messagesallvoices').hidden = true;
-    document.getElementById('messagesmicrophone').hidden = true;
-    document.getElementById('messagesstream').hidden = true;
+    messagesallvoices.hidden = true;
+    messagesmicrophone.hidden = true;
+    messagesstream.hidden = true;
     document.getElementById(activemode).hidden = false;
 }
 
@@ -39,7 +39,6 @@ microphone.onclick = function () {
 
     const start = document.getElementById('start');
     const stop = document.getElementById('stop');
-    const div = document.getElementById('messagesallvoices');
 
     start.onclick = () => {
         navigator.mediaDevices.getUserMedia({ audio: true })
@@ -55,7 +54,15 @@ microphone.onclick = function () {
                     const audio_url = URL.createObjectURL(blob);
                     const audio = new Audio(audio_url);
                     audio.setAttribute('controls', 1);
-                    div.appendChild(audio);
+                    if (messagesallvoices.childElementCount >= 5) messagesallvoices.firstElementChild.remove();
+                    messagesallvoices.appendChild(audio);
+
+                    const player = document.getElementById('player');
+                    if (window.URL) { //это нужно починить
+                        player.srcObject = stream;
+                    } else {
+                        player.src = stream;
+                    }
                 });
                 stop.onclick = () => {
                     mediaRecorder.stop();

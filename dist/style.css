@@ -1,12 +1,20 @@
-.selecteditem a,
-.selecteditem p {
+.selecteditem a, .selecteditem p {
   color: #009885;
   text-shadow: 0 0 1px #009885;
 }
 
-a,
-p {
+a, p {
   text-shadow: 0 0 0px #009885;
+}
+
+button {
+  background: #F1F3F4;
+  color: dimgray;
+  border-radius: 3px;
+  font-size: medium;
+  margin: 30px 5px;
+  padding: 5px 20px;
+  border: none;
 }
 
 p {
@@ -18,8 +26,8 @@ p {
 .dashboard {
   text-align: center;
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .activelements {
@@ -27,9 +35,10 @@ p {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -webkit-box-shadow: 0 -6px 4px -4px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 -6px 4px -4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 -6px 4px -4px rgba(0, 0, 0, 0.2);
+  margin: 5px;
 }
 
 .icons {
@@ -43,11 +52,11 @@ p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 97vh;
-  margin: auto;
   width: 390px;
+  margin: auto;
 }
 
 .centerorientation {
@@ -56,11 +65,11 @@ p {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .iconvalues {
@@ -71,6 +80,6 @@ p {
 
 .selectionoutput {
   font-weight: bolder;
-  color: #2c2a2c;
+  color: dimgray;
 }
 /*# sourceMappingURL=style.css.map */
